@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Regcanition</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #2F4F4F;">
+    <div class="jumbotron jumbotron-fluid bg-secondary text-light">
+        <div class="container">
+          <h1>Hand Reganition</h1>
+          <p>This can tell if you are feeling amazed, good or victorious. Just show your hand!</p>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="card-columns text-secondary">
+            <div class="card bg-dark">
+              <div class="card-body text-center">
+                <h1 class="card-text">Webcam</h1>
+              </div>
+                <div class="jumbotron bg-light">
+                <div class="container" id="camera">
+
+                </div>
+                </div>
+            </div>
+            <div class="card bg-secondary text-light">
+              <div class="card-body text-center">
+                <h1 class="card-text">Options</h1>
+              </div>
+              <div class="jumbotron bg-dark">
+                <div class="container">
+                  <center>
+                  <button class="btn btn-outline-secondary btn-lg float-left" onclick="take_snap()">Capture Image</button>
+                  <button class="btn btn-outline-secondary btn-lg float-right" onclick="inden_snap()">Identify Image</button>
+                  <h2 style="font-family: 'Ubuntu', sans-serif;" class="text-secondary">This is 
+                    <h2 id="output_sucess" class="text-success"></h2> 
+                  </center>
+                </div>
+                </div>
+            </div>
+            <div class="card bg-dark text-secondary">
+              <div class="card-body text-center">
+                <h1 class="card-text">Result</h1>
+              </div>
+              <div class="jumbotron bg-light">
+                <div class="container">
+                  <div id="result" style="width: 100%;"></div>
+                </div>
+                </div>
+            </div>
+            </div>
+      </div>
+
+      <script src="main.js"></script>
+      <style>
+        #snapresult {
+          width:350px;
+          height:300px;
+        }
+      </style>
+</body>
+</html>
